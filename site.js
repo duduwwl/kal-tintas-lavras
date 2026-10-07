@@ -48,7 +48,7 @@ function toast(message){
 
 function syncCart(){
   const cart = getCart();
-  document.querySelectorAll('[data-cart-count]').forEach(element => element.textContent = cartQuantity(cart));
+  document.querySelectorAll('[data-cart-count], #cart-count').forEach(element => element.textContent = cartQuantity(cart));
   const items = document.querySelector('#cart-items, #drawer-items');
   const total = document.querySelector('#cart-total, #drawer-total');
   if(!items || !total) return;
